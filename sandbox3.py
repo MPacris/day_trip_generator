@@ -27,11 +27,9 @@ random_transportation = random.choice(transportations)
 
 random_entertainment = random.choice(entertainments)
 
-
-
 #(15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things.
-
 print(f'The random day trip generator has suggested a day trip to {random_destination}, where you will eat {random_restaurant} food while exploring the city by {random_transportation} culminated by going {random_entertainment}!!!'  )
+
 
 def confirm_choice(list, type):
     confirmation = ""
@@ -48,27 +46,36 @@ if confirmation == 'OK':
 
 elif confirmation != 'OK':
     while confirmation != 'OK':
-        confirmation = confirm_choice(destinations, 'destination')    
-    print(f"You have selected {random_destination} as the destination city!")
-
-    confirmation = confirm_choice(restaurants, 'type of food' )
-    random_selection = random_destination
-    print(f"You have selected {random_restaurant} as the type of food you will eat!")
         
-    confirmation = confirm_choice(transportations, 'transportation')
-    print(f"You have chosen {random_transportation} as the means for exploring the city!")
-                  
-    confirmation = confirm_choice(entertainments,'entertainment')
-    print(f"You have chosen to go {random_entertainment} as your entertainment activity")
+        confirmation = confirm_choice(destinations, 'destination')       
+    print(f"You have selected {} as the destination city!")
 
+    restaurant_confirmation = input(f"The generator has selected {random_restaurant} food for the suggestion for types of food --- to confirm and lock in this selection type 'OK' to confirm. ")  
+    while restaurant_confirmation != 'OK':             
+            random_restaurant = random.choice(restaurants)
+            restaurant_confirmation = input(f"The generator has selected {random_restaurant} food for the suggestion for types of food --- to confirm and lock in this selection type 'OK' to confirm. ")
+    print(f"You have selected {random_restaurant} as the type of food you will eat!")
+   
+    
+    transportation_confirmation = input(f"The generator has selected {random_transportation} as the mode of mode of transportation to be used the city---type 'OK' to confirm  ")
+    while transportation_confirmation != 'OK':
+            random_transportation = random.choice(transportations)
+            transportation_confirmation = input(f"The generator has selected {random_transportation} as the mode of mode of transportation to be used the city---type 'OK' to confirm  ")
+    print(f"You have chosen {random_transportation} as the means for exploring the city!")
+
+    entertainment_confirmation = input(f"The generator has selected for you to go {random_entertainment} as the chosen activity for entertainment---type 'OK' to confirm  ")
+    while entertainment_confirmation != 'OK':
+            random_entertainment = random.choice(entertainments)
+            entertainment_confirmation = input(f"The generator has selected for you to go {random_entertainment} as the chosen activity for entertainment---type 'OK' to confirm  ")
+    print(f"You have chosen to go {random_entertainment} as your entertainment activity")
 #(10  points): As a user, I want to display my completed trip in the console
 
-print(f'Based on your locked in selections, the trip generator has you going to {random_destination}, eating {random_restaurant} food, while navigating the city by {random_transportation} and enjoying a trip to {random_entertainment}!!!!' )
+    print(f'Based on your locked in selections, the trip generator has you going to {random_destination}, eating {random_restaurant} food, while navigating the city by {random_transportation} and enjoying a trip to {random_entertainment}!!!!' )
         
 
 #(10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections.
-confirmation = input(f"If you are satisfied with your planned trip please type 'OK'  ")
-print(f"Complete! Your trip to {random_destination}, where you will be eating {random_restaurant} food, while navigating the city by {random_transportation} and enjoying a trip to {random_entertainment} has been confirmed!!! ")
+    confirmation = input(f"If you are satisfied with your planned trip please type 'OK'  ")
+    print(f"Complete! Your trip to {random_destination}, where you will be eating {random_restaurant} food, while navigating the city by {random_transportation} and enjoying a trip to {random_entertainment} has been confirmed!!! ")
 
 
 

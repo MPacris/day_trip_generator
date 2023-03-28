@@ -2,6 +2,8 @@
 #Commit 1, initial set up of file; 
 #Commit 2, first pass of structure, minor updates; worked in sandbox
 #Commit 3, move from sandbox2 to main.  updates as needed on wording for flow, removed extra imports and print functions
+#Commit 4, main file is the working version.  it was how i envisioned the process to work. sandboxes were attempts to use function for random options.  
+    #was having issues with trying to get the item 'OK'd' into what was being said was confirmed. Will continue to work in sandboxes
 
 #(5 points):  As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainment in their own separate Lists. 
 destinations = ['Amsterdam', 'Brussels', 'Stuttgart', 'Paris', 'Dublin']
@@ -61,6 +63,7 @@ elif confirmation != 'OK':
         print(f"You have chosen {random_transportation} as the means for exploring the city!")
 
         entertainment_confirmation = input(f"The generator has selected for you to go {random_entertainment} as the chosen activity for entertainment---type 'OK' to confirm  ")
+
         while entertainment_confirmation != 'OK':
             random_entertainment = random.choice(entertainments)
             entertainment_confirmation = input(f"The generator has selected for you to go {random_entertainment} as the chosen activity for entertainment---type 'OK' to confirm  ")

@@ -4,6 +4,7 @@
 #Commit 3, move from sandbox2 to main.  updates as needed on wording for flow, removed extra imports and print functions
 #Commit 4, main file is the working version.  it was how i envisioned the process to work. sandboxes were attempts to use function for random options.  
     #was having issues with trying to get the item 'OK'd' into what was being said was confirmed. Will continue to work in sandboxes
+#Commit main file is working file, sandbox 2 was where i left off working on the functions piece.
 
 #(5 points):  As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainment in their own separate Lists. 
 destinations = ['Amsterdam', 'Brussels', 'Stuttgart', 'Paris', 'Dublin']

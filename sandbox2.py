@@ -48,18 +48,17 @@ if confirmation == 'OK':
 
 elif confirmation != 'OK':
     while confirmation != 'OK':
-        confirmation = confirm_choice(destinations, 'destination')    
-    print(f"You have selected {random_destination} as the destination city!")
+        confirmation = confirm_choice(destinations, 'destination')
+        print(f"You have selected {random_destination} as the destination city!")
 
-    confirmation = confirm_choice(restaurants, 'type of food' )
-    random_selection = random_destination
-    print(f"You have selected {random_restaurant} as the type of food you will eat!")
+        confirmation = confirm_choice(restaurants, 'type of food' )
+        print(f"You have selected {random_restaurant} as the type of food you will eat!")
         
-    confirmation = confirm_choice(transportations, 'transportation')
-    print(f"You have chosen {random_transportation} as the means for exploring the city!")
+        confirmation = confirm_choice(transportations, 'transportation')
+        print(f"You have chosen {random_transportation} as the means for exploring the city!")
                   
-    confirmation = confirm_choice(entertainments,'entertainment')
-    print(f"You have chosen to go {random_entertainment} as your entertainment activity")
+        confirmation = confirm_choice(entertainments,'entertainment')
+        print(f"You have chosen to go {random_entertainment} as your entertainment activity")
 
 #(10  points): As a user, I want to display my completed trip in the console
 

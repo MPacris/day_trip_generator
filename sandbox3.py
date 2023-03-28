@@ -46,9 +46,9 @@ if confirmation == 'OK':
 
 elif confirmation != 'OK':
     while confirmation != 'OK':
-        
-        confirmation = confirm_choice(destinations, 'destination')       
-    print(f"You have selected {} as the destination city!")
+          confirmation = confirm_choice(destinations, 'destination')     
+            
+    print(f"You have selected {random_destination} as the destination city!")
 
     restaurant_confirmation = input(f"The generator has selected {random_restaurant} food for the suggestion for types of food --- to confirm and lock in this selection type 'OK' to confirm. ")  
     while restaurant_confirmation != 'OK':             
